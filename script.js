@@ -70,6 +70,7 @@ let intentos = 4;//Si esto se modifica, se puede aumentar o disminuir el numero 
 /*let palabra; para que funcione con la API, simplemente quitar este comentario y el de la funcion que llama a la API*/ 
 let diccionario = ['APPLE', 'HURLS', 'WINGS', 'YOUTH']
 Math.floor(Math.random() * 3) + 1;
-const palabra = diccionario[Math.floor(Math.random() * diccionario.length)];//Linea 71 al 74 hace que el codigo funcione con un vector, comentar esas lineas para que funcione con la API
+const palabra = diccionario[Math.floor(Math.random() * diccionario.length)];//Linea 71 al 75 hace que el codigo funcione con un vector, comentar esas lineas para que funcione con la API
+console.log(palabra);//Para hacer trampa, te deja ver en la consola la palabra actual
 const button = document.getElementById("guess-button");//Consigue la informacion del boton de Intentar
 button.addEventListener("click", intentar);//despues del click, llama la funcion intentar

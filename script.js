@@ -1,11 +1,11 @@
-/*fetch('https://random-word-api.herokuapp.com/word?length=5&&number=1&&lang=es')//Endpoint Word hace que traiga palabras al azar, el parametro lenght le dice cuantas letras tiene que tener la palabra, number la cantidad de palabras y lang es español
+fetch('https://random-word-api.herokuapp.com/word?length=5&&number=1&&lang=es')//Endpoint Word hace que traiga palabras al azar, el parametro lenght le dice cuantas letras tiene que tener la palabra, number la cantidad de palabras y lang es español
 .then(response => response.json())//Esto es necesario para que funcione, no entiendo como funciona todavia
 .then(response => {
     palabra = response[0].toUpperCase().normalize('NFKD').replace(/[^\w]/g, '');//.toUpperCase lleva las cosas a mayuscula, .normalize y .replace quitan y reemplazan los acentos a las palabras
     console.log(palabra);//Para hacer trampa, te deja ver en la consola la palabra actual
 })
 .catch(err => console.error(err));//En caso de error con la API
-*/
+
 function intentar() {
     const INTENTO = leerIntento();
     const GRID = document.getElementById("grid");
@@ -67,10 +67,9 @@ function terminar(mensaje) {//Esta funcion simplemente cambia el h1 dependiendo 
 }
 
 let intentos = 4;//Si esto se modifica, se puede aumentar o disminuir el numero de intentos disponibles
-/*let palabra; para que funcione con la API, simplemente quitar este comentario y el de la funcion que llama a la API*/ 
-let diccionario = ['APPLE', 'HURLS', 'WINGS', 'YOUTH']
+/*let diccionario = ['APPLE', 'HURLS', 'WINGS', 'YOUTH']
 Math.floor(Math.random() * 3) + 1;
-const palabra = diccionario[Math.floor(Math.random() * diccionario.length)];//Linea 71 al 75 hace que el codigo funcione con un vector, comentar esas lineas para que funcione con la API
-console.log(palabra);//Para hacer trampa, te deja ver en la consola la palabra actual
+const palabra = diccionario[Math.floor(Math.random() * diccionario.length)];
+console.log(palabra);//Para hacer trampa, te deja ver en la consola la palabra actual*/
 const button = document.getElementById("guess-button");//Consigue la informacion del boton de Intentar
 button.addEventListener("click", intentar);//despues del click, llama la funcion intentar
